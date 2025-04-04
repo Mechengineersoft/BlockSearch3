@@ -24,7 +24,7 @@ export default function ForgotUsernamePage() {
   const forgotUsernameMutation = useMutation({
     mutationFn: async (data: ForgotUsernameForm) => {
       try {
-        const response = await fetch("/.netlify/functions/forgot-username", {
+        const response = await fetch("/api/forgot-username", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)

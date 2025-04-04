@@ -39,7 +39,7 @@ export default function ForgotPasswordPage() {
   const forgotPasswordMutation = useMutation({
     mutationFn: async (data: ForgotPasswordForm) => {
       try {
-        const response = await fetch("/.netlify/functions/forgot-password", {
+        const response = await fetch("/api/forgot-password", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)

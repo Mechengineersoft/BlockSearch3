@@ -1,11 +1,20 @@
 [build]
-base = "/"
 command = "npm run build"
 publish = "dist"
 functions = "netlify/functions"
 
 [build.environment]
 NODE_VERSION = "18"
+
+[functions]
+node_bundler = "esbuild"
+external_node_modules = ["@node-rs/bcrypt"]
+
+[dev]
+framework = "#custom"
+command = "npm run dev"
+port = 5001
+targetPort = 5001
 
 [[redirects]]
 from = "/api/*"

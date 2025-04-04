@@ -43,7 +43,7 @@ export default function OtpVerificationPage() {
 
   const verifyOtpMutation = useMutation({
     mutationFn: async (data: OtpForm & { tempUserId: string }) => {
-      const response = await fetch("/.netlify/functions/verify-otp", {
+      const response = await fetch("/api/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
