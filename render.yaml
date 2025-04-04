@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: google-sheet-search-portal-api
+    env: node
+    buildCommand: npm install && npx vite build && npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GOOGLE_SHEETS_ID
+        sync: false
+        value: "1flBVZJ4ouDG8nlQekafurdlHzu27PD7cfBuMfTfiaO4"
+      - key: GOOGLE_SERVICE_ACCOUNT
+        sync: false
+        fromFile: ./attached_assets/Pasted--type-service-account-project-id-login-451104-private-key-id-f7572c98e315d-1739682704374.txt
+      - key: SESSION_SECRET
+        sync: false
+        generateValue: true
+        length: 32
+      - key: REDIS_URL
+        sync: false
+        value: "${REDIS_URL}"
+    healthCheckPath: /api/health
+    autoDeploy: true

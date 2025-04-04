@@ -1,0 +1,21 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Environment variables
+.env
+.env.*
+
+# Sensitive files
+attached_assets/
+sessions/
+*.pem
+*.key
+*.p12
+*.json.key
+*.service-account.json
+# Local Netlify folder
+.netlify
