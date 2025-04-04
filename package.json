@@ -10,13 +10,13 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@netlify/functions": "^2.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@hookform/resolvers": "^3.9.1",
     "@jridgewell/trace-mapping": "^0.3.25",
     "@mui/material": "^6.4.8",
     "@neondatabase/serverless": "^0.10.4",
+    "@netlify/functions": "^2.0.0",
     "@radix-ui/react-accordion": "^1.2.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-aspect-ratio": "^1.1.0",
@@ -102,6 +102,7 @@
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.30.4",
     "esbuild": "^0.24.0",
+    "netlify-cli": "^19.1.5",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "tsx": "^4.19.1",
